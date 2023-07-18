@@ -38,21 +38,21 @@ int main() {
 			}
 			std::cout << std::endl;
 		}		
-		std::cout << "Choose a row from 1 through 4\n";
+		std::cout << "Choose a Row from 1 through 4\n";
 		std::cin >> row;
 		std::cout << "Choose a Column from 1 through 4\n";
 		std::cin >> column;
 		numberOfTurns++;
 		//if loop defining what to do if player hits a ship
-		if (ships[row+1][column+1] == 1) {
+		if (ships[row - 1][column - 1] == 1) {
 			hits++;
 			std::cout << "Hit! " << (7 - hits) << " left!\n\n";
-			ships[row+1][column+1] = 0;
-			playerArray[row + 1][column + 1] = playerHit;
+			ships[row - 1][column - 1] = 0;
+			playerArray[row - 1][column - 1] = playerHit;
 		}
 		else {
 			std::cout << "Miss!\n\n";
-			playerArray[row + 1][column + 1] = playerMiss;
+			playerArray[row - 1][column - 1] = playerMiss;
 		}
 	}
 	std::cout << "Victory!\n";
