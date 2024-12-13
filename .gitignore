@@ -1,0 +1,9 @@
+#Visual Studio Solution Files
+**/*.sln
+**/*.vcxproj*
+
+#Visual Studio Binaries
+**/x64
+
+#Visual Studio Configs
+**/.vs
